@@ -14,13 +14,14 @@ from dateutil.relativedelta import *
 #1. "Update database" via scraping.
 #2. Generate Advanced stats DF. (using fight database)
 #3. Generate Model-ready DB (using advanced stats df)
-#4. 
+#4. Use model.generateModel() to generate a model with this dataset.
+
 
 
 
 #To make predictions.
-#4. Generate createPrePredictiondf (From Model-ready DB)
-#5. feed prediction DF into model.
+#4. Generate createPrePredictiondf (df of 1 fighter vs another), (From Model-ready DB)
+#5. Feed this DF into model using pred_proba() or predict()
 
 def splitCol(column, delimiter):
     x = column.replace("", np.NaN)
